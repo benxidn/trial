@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>MLMod Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Include header.html -->
+    <div id="header-container"></div>
 
+    <main>
+        <h2>Halaman Utama</h2>
+        <p>Ini adalah halaman utama dari MLMod.</p>
+    </main>
+
+    <script>
+        // Load header.html ke dalam div
+        fetch('/link/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
